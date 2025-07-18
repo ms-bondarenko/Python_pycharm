@@ -2,5 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lesson5/05_lesson/Python_pycharm" vcs="Git" />
   </component>
 </project>
