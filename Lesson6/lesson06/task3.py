@@ -17,3 +17,5 @@ find = driver.find_element(By.CSS_SELECTOR, "#award")
 f = find.get_attribute('src')
 
 print(f)
+
+driver.quit()

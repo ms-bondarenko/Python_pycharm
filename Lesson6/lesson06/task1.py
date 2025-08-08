@@ -17,7 +17,6 @@ WebDriverWait(driver, 20).until(
     )
 txt=driver.find_element(By.XPATH, "//*[contains(text(), 'Data loaded with AJAX')]").text
 print(txt)
-
 driver.quit()
 
 
