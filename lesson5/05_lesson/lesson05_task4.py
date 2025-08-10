@@ -1,0 +1,39 @@
+from selenium import webdriver
+from selenium.webdriver import Keys
+from selenium.webdriver.firefox.service import Service as FirefoxService
+from webdriver_manager.firefox import GeckoDriverManager
+from time import sleep
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+
+
+# Инициализация драйвера для Firefox
+driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
+# Переход на страницу
+driver.get("http://the-internet.herokuapp.com/login")
+#Ожидание
+sleep(5)
+#определение локатора для login и ввод login
+search_locator="#username"
+search_input=driver.find_element(By.CSS_SELECTOR,search_locator).send_keys("tomsmith")
+#ожидание
+sleep(5)
+#Определение локатора для password и ввод password
+search_locator="#password"
+search_input=driver.find_element(By.CSS_SELECTOR,search_locator).send_keys("SuperSecretPassword!")
+sleep(5)
+#определение локатора для кнопки входа команда драйверу найти кнопку и нажать
+search_locator=".fa"
+driver.find_element(By.CSS_SELECTOR, search_locator).click()
+sleep(10)
+#определение локатора сообщения , ожидание появления сообщения об успешном входе
+success_message_locator = "div#flash"
+WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, success_message_locator)))
+
+# Печать сообщения
+success_message = driver.find_element(By.CSS_SELECTOR, success_message_locator).text
+print(success_message)
+#закрытие драйвера
+driver.quit()
