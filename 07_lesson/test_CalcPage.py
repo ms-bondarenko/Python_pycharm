@@ -28,6 +28,3 @@ def test_calc_page():
         browser.quit()
 
 
-
-
-

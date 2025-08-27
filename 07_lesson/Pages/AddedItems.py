@@ -12,4 +12,3 @@ class AddedItems():
         self._driver.find_element(By.CSS_SELECTOR, "#add-to-cart-sauce-labs-onesie").click()
         self._driver.find_element(By.CSS_SELECTOR, "#shopping_cart_container").click()
         self._driver.find_element(By.CSS_SELECTOR, "#checkout").click()
-
