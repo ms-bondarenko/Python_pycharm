@@ -1,7 +1,5 @@
 import selenium
 from selenium import webdriver
-# from selenium.webdriver.chrome.service import Service
-# from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.firefox.service import Service
 from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.common.by import By
@@ -12,7 +10,6 @@ from Pages.AddedItems import AddedItems
 from Pages.DataEntryPage import DataEntryPage
 
 def test_shop_pages():
-    # browser = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     browser = webdriver.Firefox(service=Service(GeckoDriverManager().install()))
     try:
         login_page = LoginPage(browser)
