@@ -1,7 +1,7 @@
 import requests
 import pytest
 
-from config import base_url, token, projectID, projectID_neg
+from config import base_url, token, id_project, id_project_negative
 
 @pytest.fixture
 def get_project():
@@ -18,7 +18,7 @@ def test_get_positive():
         'Content-Type': 'application/json',
         'Authorization': f'Bearer {token}'
     }
-    resp = requests.get(f'{base_url}/api-v2/projects/{projectID}', json=payload, headers=headers)
+    resp = requests.get(f'{base_url}/api-v2/projects/{id_project}', json=payload, headers=headers)
     response_data = resp.json()
     assert 'id' in response_data
     assert resp.status_code == 200
@@ -34,7 +34,8 @@ def test_get_negative():
         'Content-Type': 'application/json',
         'Authorization': f'Bearer {token}'
     }
-    resp = requests.get(f'{base_url}/api-v2/projects/{projectID_neg}', json=payload, headers=headers)
+    resp = requests.get(f'{base_url}/api-v2/projects/{id_project_negative}', json=payload, headers=headers)
     response_data = resp.json()
-    assert 'id' in response_data
-    assert resp.status_code == 200
+    print(f'Ststus Code: {resp.status_code}')
+    print(f'Response Data: {response_data}')
+    assert resp.status_code == 404
