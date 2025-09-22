@@ -1,5 +1,3 @@
-
-
 def mouth_to_season(n):
     if n==1: print("Зима")
     elif n==2: print("Зима")
