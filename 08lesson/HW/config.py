@@ -1,0 +1,5 @@
+base_url = "https://ru.yougile.com"
+token = ""
+id_project = ""
+id_project_negative = "698cd00b-1294-46e4-afde-d9ba03f6d0"
+token_negative = "698cd00b-1294-46e4-afde-d9ba03f6d0c2glhlphp"
