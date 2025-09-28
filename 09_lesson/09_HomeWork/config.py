@@ -1,0 +1,5 @@
+user = ""
+passwword = ""
+db = ""
+host = "localhost"
+port = "5432"
