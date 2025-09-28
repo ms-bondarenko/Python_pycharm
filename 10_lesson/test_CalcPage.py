@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 import allure
 from Pages.CalcPage import CalcPage
 
+
 @allure.feature("Калькулятор")
 @allure.story("Тестирование калькулятора на правильность вычислений")
 def test_calc_page():

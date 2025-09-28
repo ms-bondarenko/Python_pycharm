@@ -2,7 +2,6 @@ import pytest
 from selenium.webdriver.common.by import By
 import allure
 
-
 @allure.feature("Страница добавления товаров")
 class AddedItems:
     def __init__(self, browser):

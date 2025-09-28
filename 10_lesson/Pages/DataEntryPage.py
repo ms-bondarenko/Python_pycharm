@@ -1,7 +1,6 @@
 from selenium.webdriver.common.by import By
 import allure
 
-
 @allure.feature("Страница ввода данных")
 class DataEntryPage:
     def __init__(self, browser):

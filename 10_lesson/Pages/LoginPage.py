@@ -2,7 +2,6 @@ import pytest
 from selenium.webdriver.common.by import By
 import allure
 
-
 @allure.severity("blocker")
 @allure.feature("Страница логина")
 class LoginPage:

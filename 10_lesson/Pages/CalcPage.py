@@ -4,6 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import allure
 
+
 class CalcPage:
     def __init__(self, browser):
         """Инициализация класса CalcPage.

@@ -8,7 +8,6 @@ from Pages.LoginPage import LoginPage
 from Pages.AddedItems import AddedItems
 from Pages.DataEntryPage import DataEntryPage
 
-
 @allure.feature("Тестирование магазина")
 @allure.story("Проверка сумм на страницах магазина")
 def test_shop_pages():
